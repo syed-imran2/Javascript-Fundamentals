@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <script>
+            let message = prompt("Who's there", '');
+            if (message == 'Admin'){
+                let password = prompt("Password?", '');
+                if (password == 'TheMaster'){
+                    alert("Welcome");
+                    }
+
+                else if (password == null || password == ''){
+                    alert("Canceled")
+                    }
+                else{
+                    alert("Wrong password")
+                    }
+
+            }
+            else if (message == null || message == ''){
+                alert("Canceled")
+            }
+            else{
+                alert("I don't know you")
+            }
+        </script>
+    </body>
+</html>
