@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script>
+            while(true){
+                let message = prompt("Enter a number greater than 100?", 0 );
+                if (message == null || message == ''){
+                    break;
+                }
+                else if(message <= 100){
+                    continue;
+                }
+                else if(message > 100){
+                    break;
+                }
+            }
+        </script>
+        <script>
+            let num;
+            do{
+                num = prompt("Enter a number greater than 100?", 0 );
+            } while( num <= 100 && num );
+        </script>
+    </body>
+</html>
