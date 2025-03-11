@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <script>
+            function checkAge(age1){
+                let result = age1 > 18 ? true : confirm('Did parents allow you?');
+                return result;
+            }
+            let age1 = +prompt("Enter your age:", 0);
+            alert(checkAge(age1));
+        </script>
+        <script>
+            function checkAge(age2){
+                let result = age2 > 18 || confirm('Did parents allow you?');
+                return result;
+            }
+            let age2 = +prompt("Enter your age:", 0);
+            alert(checkAge(age2));
+        </script>
+    </body>
+</html>

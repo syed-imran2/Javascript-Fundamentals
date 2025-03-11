@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            let x = +prompt("x?",'');
+            let n = +prompt("n?",'');
+            function pow(x,n){
+                let power = x ** n;
+                return power;
+            }
+            if( x == null || n == null || x == '' || n == ''){
+                alert("Power null is not supported, use a positive integer");
+            }
+            else{
+                alert(pow(x,n));
+            }
+        </script>
+    </body>
+</html>

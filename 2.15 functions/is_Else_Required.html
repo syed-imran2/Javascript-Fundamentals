@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <script>
+            function checkAge(age) {
+              if (age > 18) {
+                return true;
+              } else {
+                return confirm('Did parents allow you?');
+              }
+            }
+
+            function checkAge(age) {
+              if (age > 18) {
+                return true;
+              }
+              return confirm('Did parents allow you?');
+            }
+            checkAge(14);
+        </script>
+    </body>
+</html>
+<!-- No the function will not work any differently.
+     Both will work the same because; 
+     1st case: there is an else which returns the question if conition fails
+     2nd case: there is no else but if the condition fails, then if will not
+                work and thus the fuction continues to run the next line which
+                has the question as default return. -->
