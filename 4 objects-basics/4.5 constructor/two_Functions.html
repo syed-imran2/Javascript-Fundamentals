@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <script>
+            function A() { return obj }
+            function B() { return obj }
+                    
+            let obj = {}; // Both are referenced to the same object.
+            
+            let a = new A();
+            let b = new B();
+                    
+            alert( a == b );
+        </script>
+    </body>
+</html>
