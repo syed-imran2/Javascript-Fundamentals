@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script>
+            function makeUser() {
+              return {
+                name: "John",
+                ref: this // this should be given inside a method since it is used to refer from the respective object.
+                          // here what happens is the this becomes a window function or undefined and hence the value returned is an error.
+              };
+            }
+
+            let user = makeUser();
+
+            alert( user.ref.name ); // error 
+        </script>
+    </body>
+</html>
