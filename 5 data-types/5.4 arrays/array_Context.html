@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <script>
+            let arr = ["a", "b"];
+
+            arr.push(function() {
+              alert( this );
+            });
+
+            arr[2](); // we receive the array as a whole.
+                      // a,b,function(){ alert( this ); } 
+
+        </script>
+    </body>
+</html>
