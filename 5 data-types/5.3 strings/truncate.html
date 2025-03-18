@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script>
+            function truncate(str,maxlength) {
+                let len = str.length;
+                if ( len > maxlength ) {
+                    return str.slice(0,maxlength-1) + "...";
+                }
+                else {
+                    return str;
+                }
+            }
+            alert(truncate("What I'd like to tell on this topic is:", 20));
+            alert(truncate("Hi everyone!", 20));
+        </script>
+    </body>
+</html>
