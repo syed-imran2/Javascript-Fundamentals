@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <script>
+      function makeArmy() {
+        let shooters = [];
+
+        let i = 0;
+        while (i < 10) {
+          let j = i;
+          let shooter = function () {
+            alert(j); // that should show its number
+          };
+          shooters.push(shooter); // add to the array
+          i++;
+        }
+
+        // return the array of shooters
+        return shooters;
+      }
+
+      let army = makeArmy();
+
+      army[0](); // 0
+      army[1](); // 1
+      army[2](); // 2
+    </script>
+  </body>
+</html>
