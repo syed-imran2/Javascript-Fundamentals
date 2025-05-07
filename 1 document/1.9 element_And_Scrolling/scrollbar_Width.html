@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+  let div = document.createElement('div');
+
+  div.style.overflowY = 'scroll';
+  div.style.width = '50px';       
+  div.style.height = '50px';
+
+  div.style.position = 'absolute';
+  div.style.top = '-9999px';
+
+  document.body.append(div);
+
+  let scrollbarWidth = div.offsetWidth - div.clientWidth;
+
+  div.remove();
+
+  alert("Scrollbar width: " + scrollbarWidth + "px");
+</script>
+
+</body>
+</html>
