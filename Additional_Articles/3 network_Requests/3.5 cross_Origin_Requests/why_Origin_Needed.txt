@@ -1,0 +1,9 @@
+1. Why Origin is needed, if Referer has even more information?
+2. Is it possible that there’s no Referer or Origin, or is it incorrect?
+
+answer:
+1. We need Origin, because sometimes Referer is absent. For instance,
+   when we fetch HTTP-page from HTTPS (access less secure from more secure),
+   then there’s no Referer.
+2. Yes, it's possible that there’s no Referer or no Origin header in an HTTP request
+   and this is not necessarily incorrect. 
