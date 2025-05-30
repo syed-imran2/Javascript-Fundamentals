@@ -27,7 +27,29 @@
     </div>
 
   <script>
-    // 👀👀👀👀👀👀👀👀👀👀👀👀👀👀👀
+    const triggers = document.querySelectorAll("a"); // select all the links
+    const highlight = document.createElement('span'); // create a span
+    highlight.classList.add("highlight"); // give the span a class name
+    document.body.appendChild(highlight); // append it to body
+
+    function highlightLink() {
+      const linkCoords = this.getBoundingClientRect(); // gives coordinates of each link word
+      console.log(linkCoords);
+    const coords = { // create custom coordinates
+      width: linkCoords.width,
+      height: linkCoords.height,
+      top: linkCoords.top + window.scrollY,
+      left: linkCoords.left + window.scrollX
+    };
+
+    highlight.style.width = `${coords.width}px`;
+    highlight.style.height = `${coords.height}px`;
+    highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
+
+  }
+
+  triggers.forEach(a => a.addEventListener('mouseenter', highlightLink));
+
   </script>
 </body>
 </html>
